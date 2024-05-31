@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
-    private static SceneLoader Instance;
+    public static SceneLoader Instance;
+    public AsyncOperation asyncOperation;
 
     void Start()
     {
@@ -18,11 +19,13 @@ public class SceneLoader : MonoBehaviour
 
     IEnumerator LoadScene(string sceneName)
     {
-        SceneManager.LoadScene("Loading");
+        SceneManager.LoadSceneAsync("Loading");
 
-        yield return new WaitForSecondsRealtime(10);
-        AsyncOperation operation =  SceneManager.LoadSceneAsync(sceneName);
-        while (!operation.isDone) 
+       
+        asyncOperation =  SceneManager.LoadSceneAsync(sceneName);
+
+        asyncOperation.allowSceneActivation = false;
+        while (!asyncOperation.isDone) 
         {
             yield return null;
         }

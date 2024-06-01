@@ -20,7 +20,7 @@ public class OpenWindowCommand : Command
 
     public override void Undo()
     {
-        throw new System.NotImplementedException();
+        sceneController.CloseWindow(IDWindow);
     }
 
   

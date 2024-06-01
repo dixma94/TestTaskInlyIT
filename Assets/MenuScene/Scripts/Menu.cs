@@ -9,14 +9,14 @@ public class Menu: WindowController
     public Button StartGameButton;
     public Button ChooseHeroButton;
 
+
+
     private void OnEnable()
     {
         OpenSettingsButton.onClick.AddListener(OpenSettings);
         StartGameButton.onClick.AddListener(StartGame);
         ChooseHeroButton.onClick.AddListener(ChooseHero);
     }
-
-
 
     private void OnDisable()
     {
@@ -27,16 +27,17 @@ public class Menu: WindowController
 
     private void StartGame()
     {
-        SceneLoader.Instance.LoadScene("GamePlay");
+        commandManager.ExecuteCommand(new OpenSceneCommand("GamePlay"));
     }
 
     private void OpenSettings()
     {
-        sceneController.OpenWindow(1);
+        commandManager.ExecuteCommand(new OpenWindowCommand(sceneController, 1));
+     
     }
 
     private void ChooseHero()
     {
-        sceneController.OpenWindow(2);
+        commandManager.ExecuteCommand(new OpenWindowCommand(sceneController, 2));
     }
 }

@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2aa720fc51da1d7498c0ea0de6a18953, type: 3}
-  m_Name: WindowRepository
+  m_Name: GamePlayWindowRepository
   m_EditorClassIdentifier: 
   Windows:
-  - {fileID: 7021457033671163753, guid: 761d995bbc8acdb47a03c24f74c90fc9, type: 3}
-  - {fileID: 8767099270464505273, guid: e7a664d1e5f5c62468326e14e0bf14c8, type: 3}
+  - {fileID: 8624716949046514344, guid: 213dca9ae7645194db5bddfd1b79a5a8, type: 3}
+  - {fileID: 1408443828641780677, guid: a33da99167827304c8f48c764e6a3045, type: 3}

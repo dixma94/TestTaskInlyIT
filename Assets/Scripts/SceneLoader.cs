@@ -14,10 +14,15 @@ public class SceneLoader : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(Instance);
    
-        StartCoroutine(LoadScene("Menu"));
+        StartCoroutine(LoadSceneCoroutine("Menu"));
     }
 
-    IEnumerator LoadScene(string sceneName)
+    public void LoadScene(string sceneName)
+    {
+        StartCoroutine(LoadSceneCoroutine(sceneName));
+    }
+
+    IEnumerator LoadSceneCoroutine(string sceneName)
     {
         SceneManager.LoadSceneAsync("Loading");
 

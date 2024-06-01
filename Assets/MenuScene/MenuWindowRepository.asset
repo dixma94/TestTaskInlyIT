@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2aa720fc51da1d7498c0ea0de6a18953, type: 3}
+  m_Name: MenuWindowRepository
+  m_EditorClassIdentifier: 
+  Windows:
+  - {fileID: 7021457033671163753, guid: 761d995bbc8acdb47a03c24f74c90fc9, type: 3}
+  - {fileID: -3165074363756808942, guid: e7a664d1e5f5c62468326e14e0bf14c8, type: 3}
+  - {fileID: 7834387058031689890, guid: 7170a2f21d83c64419e45cb71fc3e2ea, type: 3}

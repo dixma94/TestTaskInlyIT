@@ -8,9 +8,16 @@ public class SceneController : MonoBehaviour, ISceneController
 
     private Dictionary<int, WindowController> OpenedWindowsMap = new Dictionary<int, WindowController>();
 
+    private CommandManager commandManager;
+
+    private void Awake()
+    {
+        commandManager = new CommandManager();
+    }
 
     private void Start()
     {
+       
         OpenWindow(0);
     }
 
@@ -20,14 +27,9 @@ public class SceneController : MonoBehaviour, ISceneController
         OpenedWindowsMap.Add(ID, windowController);
         windowController = Instantiate(windowController);
         windowController.IsActive = true;
-        windowController.Init(this);
-        Debug.Log("Open");
+        windowController.Init(commandManager,this);
     }
 
-    private void WindowController_OpenAnotherWindow(int obj)
-    {
-        Debug.Log(obj);
-    }
 
     public void CloseWindow(int ID)
     {
@@ -37,6 +39,5 @@ public class SceneController : MonoBehaviour, ISceneController
             Destroy(OpenedWindowsMap[ID].gameObject);
             OpenedWindowsMap.Remove(ID);
         }
-        Debug.Log("Close");
     }
 }

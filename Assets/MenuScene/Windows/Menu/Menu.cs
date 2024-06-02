@@ -1,4 +1,5 @@
-﻿using UnityEngine.UI;
+﻿using System;
+using UnityEngine.UI;
 
 public class Menu: WindowController
 {
@@ -7,8 +8,11 @@ public class Menu: WindowController
     public Button StartGameButton;
     public Button ChooseHeroButton;
 
+    public override event Action<string> OnOpened;
+
     private void Start()
     {
+        OnOpened?.Invoke("Open menu");
         if (DataSaveLoader.instance.IsFileExist())
         {
 

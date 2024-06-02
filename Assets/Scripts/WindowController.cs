@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public abstract class WindowController : MonoBehaviour
 {
@@ -6,7 +7,10 @@ public abstract class WindowController : MonoBehaviour
     public bool IsActive;
     protected CommandManager commandManager;
     protected SceneController sceneController;
-    
+
+    [SerializeField] protected Button CloseButton;
+
+  
 
     public void Init(CommandManager commandManager, SceneController sceneController)
     {
@@ -14,5 +18,10 @@ public abstract class WindowController : MonoBehaviour
         this.sceneController = sceneController; 
     }
 
+    protected virtual void CloseWindow()
+    {
+        commandManager.ExecuteCommand(new CloseWindowCommand(sceneController,ID));
+        Destroy(gameObject);
+    }
     
 }

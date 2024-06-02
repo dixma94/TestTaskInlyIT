@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: GamePlayWindowRepository
   m_EditorClassIdentifier: 
   Windows:
-  - {fileID: 8624716949046514344, guid: 213dca9ae7645194db5bddfd1b79a5a8, type: 3}
   - {fileID: 1408443828641780677, guid: a33da99167827304c8f48c764e6a3045, type: 3}
+  - {fileID: 8624716949046514344, guid: 213dca9ae7645194db5bddfd1b79a5a8, type: 3}

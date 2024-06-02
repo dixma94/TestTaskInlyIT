@@ -1,9 +1,9 @@
-﻿public class OpenWindowCommand : Command
+﻿public class CloseWindowCommand : Command
 {
     SceneController sceneController;
     int IDWindow;
 
-    public OpenWindowCommand(SceneController sceneController, int IDWindow)
+    public CloseWindowCommand(SceneController sceneController, int IDWindow)
     {
         this.sceneController = sceneController;
         this.IDWindow = IDWindow;
@@ -11,15 +11,14 @@
 
     public override void Execute()
     {
-        sceneController.OpenWindow(IDWindow);
+        sceneController.CloseWindow(IDWindow);
     }
 
     public override void Undo()
     {
-        sceneController.CloseWindow(IDWindow);
+        sceneController.OpenWindow(IDWindow);
     }
 
 
 
 }
-

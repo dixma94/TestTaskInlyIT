@@ -34,8 +34,8 @@ public class SceneController : MonoBehaviour, ISceneController
     {
         if (OpenedWindowsMap.ContainsKey(ID))
         {
-            OpenedWindowsMap[ID].IsActive = false;
-            Destroy(OpenedWindowsMap[ID].gameObject);
+            WindowController windowController = OpenedWindowsMap[ID];
+            windowController.IsActive = false;
             OpenedWindowsMap.Remove(ID);
         }
     }

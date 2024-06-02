@@ -2,7 +2,7 @@
 
 public class Menu: WindowController
 {
-
+    
     public Button OpenSettingsButton;
     public Button StartGameButton;
     public Button ChooseHeroButton;
@@ -14,6 +14,7 @@ public class Menu: WindowController
         OpenSettingsButton.onClick.AddListener(OpenSettings);
         StartGameButton.onClick.AddListener(StartGame);
         ChooseHeroButton.onClick.AddListener(ChooseHero);
+        CloseButton?.onClick.AddListener(CloseWindow);
     }
 
     private void OnDisable()
@@ -21,6 +22,7 @@ public class Menu: WindowController
         OpenSettingsButton.onClick.RemoveAllListeners();
         StartGameButton.onClick.RemoveAllListeners();
         ChooseHeroButton.onClick.RemoveAllListeners();
+        CloseButton?.onClick.RemoveAllListeners();
     }
 
     private void StartGame()
@@ -38,4 +40,6 @@ public class Menu: WindowController
     {
         commandManager.ExecuteCommand(new OpenWindowCommand(sceneController, 2));
     }
+
+
 }

@@ -1070,6 +1070,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   IsActive: 0
+  CloseButton: {fileID: 0}
   OpenSettingsButton: {fileID: 8897102390736438477}
   StartGameButton: {fileID: 4494373754022402346}
   ChooseHeroButton: {fileID: 8011104618451288066}

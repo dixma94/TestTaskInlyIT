@@ -1,9 +1,23 @@
-﻿using UnityEngine.UI;
+﻿using TMPro;
+using UnityEngine;
+using UnityEngine.UI;
 
 public class GamePlay : WindowController
 {
     
     public Button PauseButton;
+
+    public TextMeshProUGUI Name;
+    public Image sprite;
+
+    private GemData gemData;
+
+    private void Start()
+    {
+        gemData =  DataSaveLoader.instance.Load();
+        Name.text = gemData.Name;
+        sprite.sprite = Resources.Load<Sprite>(gemData.spriteName);
+    }
 
     private void OnEnable()
     {

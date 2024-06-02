@@ -1,5 +1,6 @@
 ﻿using TMPro;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
@@ -9,10 +10,11 @@ public class GemDataView : AbstractDataView<GemData>, IPointerClickHandler
     [SerializeField] Image sprite;
     [SerializeField] Image SelectorImage;
 
-    public override void Init(GemData data)
+    public override async void Init(GemData data)
     {
+        this.data = data;
         Name.text = data.Name;
-        sprite.sprite = data.sprite;
+        sprite.sprite = Resources.Load<Sprite>(data.spriteName);
         SelectorImage.gameObject.SetActive(false);
     }
 
@@ -24,6 +26,7 @@ public class GemDataView : AbstractDataView<GemData>, IPointerClickHandler
     public override void Select()
     {
         SelectorImage.gameObject.SetActive(true);
+        DataSaveLoader.instance.Save(data);
     }
     public override void UnSelect()
     {

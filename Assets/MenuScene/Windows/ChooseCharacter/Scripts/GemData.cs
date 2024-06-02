@@ -1,9 +1,8 @@
-﻿using UnityEngine;
-using UnityEngine.AddressableAssets;
+﻿using System;
 
-[CreateAssetMenu(fileName = "GemData", menuName = "Scriptable/GemData")]
-public class GemData : ScriptableObject, IData
+[Serializable]
+public class GemData :  IData
 {
     public string Name;
-    public Sprite sprite;
+    public string spriteName;
 }

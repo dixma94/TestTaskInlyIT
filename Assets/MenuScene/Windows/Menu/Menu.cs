@@ -7,7 +7,19 @@ public class Menu: WindowController
     public Button StartGameButton;
     public Button ChooseHeroButton;
 
+    private void Start()
+    {
+        if (DataSaveLoader.instance.IsFileExist())
+        {
 
+            StartGameButton.enabled = true;
+        }
+        else
+        {
+            StartGameButton.enabled = false;
+        }
+        
+    }
 
     private void OnEnable()
     {
@@ -27,6 +39,7 @@ public class Menu: WindowController
 
     private void StartGame()
     {
+
         commandManager.ExecuteCommand(new OpenSceneCommand("GamePlay"));
     }
 
@@ -38,6 +51,7 @@ public class Menu: WindowController
 
     private void ChooseHero()
     {
+        CloseWindow();
         commandManager.ExecuteCommand(new OpenWindowCommand(sceneController, 2));
     }
 

@@ -11,4 +11,9 @@ public class Choose : WindowController
         CloseButton.onClick.RemoveAllListeners();
     }
 
+    protected override void CloseWindow()
+    {
+        base.CloseWindow();
+        commandManager.ExecuteCommand(new OpenWindowCommand(sceneController, 0));
+    }
 }

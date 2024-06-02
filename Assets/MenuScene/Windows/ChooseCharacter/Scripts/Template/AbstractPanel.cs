@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 
 public abstract class AbstractPanel<T> : MonoBehaviour, IShowData<T>
@@ -14,9 +15,9 @@ public abstract class AbstractPanel<T> : MonoBehaviour, IShowData<T>
         return factory;
     }
 
-    public async virtual void Show(IDataProvider<T> dataProvider)
+    public  virtual void Show(IDataProvider<T> dataProvider)
     {
-        await foreach (T item in dataProvider.GetData())
+         foreach (T item in dataProvider.GetData())
         {
             AbstractDataView<T> dataView = GetFactory().Create(item) as AbstractDataView<T>;
             dataViewList.Add(dataView);

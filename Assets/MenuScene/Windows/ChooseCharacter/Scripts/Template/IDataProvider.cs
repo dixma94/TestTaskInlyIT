@@ -2,6 +2,6 @@
 
 public interface IDataProvider<T> where T : IData
 {
-    IAsyncEnumerable<T> GetData();
+    List<T> GetData();
 }
 

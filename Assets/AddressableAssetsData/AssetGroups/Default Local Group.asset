@@ -16,27 +16,7 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: 0ee049d03dafbca4db25874cdabbca37
-  m_SerializeEntries:
-  - m_GUID: d6d428a0c8aba3b4790d4fc692c71ba9
-    m_Address: Assets/Scripts/SelectData/GemData/Ryby.asset
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: ad971a79a225f6f4191b8aad3639cf19
-    m_Address: Assets/Scripts/SelectData/GemData/Star.asset
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: 96b666a48a6c29244af9f453c20d14e8
-    m_Address: Assets/Scripts/SelectData/GemData/Sapphire.asset
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: a2fbe31ba3aa9cf4f8494b5faf5f0570
-    m_Address: Assets/Scripts/SelectData/GemData/Emerald.asset
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: 232e85e6bacfbb9419e1bf26616e5b72
-    m_Address: Assets/Scripts/SelectData/GemData
-    m_ReadOnly: 0
-    m_SerializedLabels: []
+  m_SerializeEntries: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: e2d39bfd99bb6924d8c6e8507fa289e2, type: 2}
   m_SchemaSet:

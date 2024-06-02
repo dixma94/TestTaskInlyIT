@@ -1,12 +1,14 @@
-﻿using UnityEngine;
+﻿using System.Linq;
+using UnityEngine;
 
 public class GemPanel : AbstractPanel<GemData>
 {
     [SerializeField] GemsDataProvider gemsDataProvider;
 
-    private void Start()
+    private  void Start()
     {
-        Show(gemsDataProvider);
+         Show(gemsDataProvider);
+        dataViewList.First().Select();
     }
 
     public override void OnDataViewSelected(IDataView<GemData> dataView)

@@ -32,6 +32,20 @@ public class GemsDataProvider : MonoBehaviour, IDataProvider<GemData>
         data.Add(new GemData { Name = "Ryby", spriteName = "Ryby" });
         data.Add(new GemData { Name = "Star", spriteName = "Star" });
         data.Add(new GemData { Name = "Heart", spriteName = "Heart" });
+        data.Add(new GemData { Name = "Ryby", spriteName = "Ryby" });
+        data.Add(new GemData { Name = "Star", spriteName = "Star" });
+        data.Add(new GemData { Name = "Ryby", spriteName = "Ryby" });
+        data.Add(new GemData { Name = "Star", spriteName = "Star" });
+        data.Add(new GemData { Name = "Heart", spriteName = "Heart" });
+        data.Add(new GemData { Name = "Ryby", spriteName = "Ryby" });
+        data.Add(new GemData { Name = "Star", spriteName = "Star" });
+        data.Add(new GemData { Name = "Heart", spriteName = "Heart" });
+        data.Add(new GemData { Name = "Ryby", spriteName = "Ryby" });
+        data.Add(new GemData { Name = "Star", spriteName = "Star" });
+        data.Add(new GemData { Name = "Heart", spriteName = "Heart" });
+        data.Add(new GemData { Name = "Ryby", spriteName = "Ryby" });
+        data.Add(new GemData { Name = "Star", spriteName = "Star" });
+        data.Add(new GemData { Name = "Heart", spriteName = "Heart" });
     }
     public List<GemData> GetData()
     {
